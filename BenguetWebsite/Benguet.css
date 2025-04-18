@@ -21,7 +21,7 @@ body {
 }
 
 .Intro h1 {
-    font-size: 95px;
+    font-size: 100px;
     color: rgb(252, 251, 253);
     font-weight: 100%;
     margin-bottom: 0px;
@@ -78,7 +78,7 @@ body {
     transition: all 0.3s ease;
     text-decoration: none;
 }
-
+<!--for navigation-->
 .navigation .navy:hover{
     color: black;
     text-decoration:dotted;
