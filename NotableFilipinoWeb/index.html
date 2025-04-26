@@ -3,307 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bayaning Pilipino</title>
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="icon" href="image/phFlag-removebg-preview.png">
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <title>bayaniHub</title>
+    <link rel="stylesheet" href="WEB.CSS">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Meddon&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <div class="nav-container">
-            <div class="logo">PILIPINO</div>
-            <nav id="main-nav">
-                <a href="#home">Home</a>
-                <a href="#heroes">Heroes</a>
-                <a href="#about">About us</a>
-                <a href="#objectives">Objectives</a>
-                <div class="search-container">
-                    <input type="text" placeholder="Search...">
-                    <button>🔍</button>
-                </div>
-            </nav>
-        </div>
-        <button class="menu-toggle" id="menu-toggle">☰</button>
-    </header>
 
-    <!-- Section 1: Home/Hero Section -->
-    <section id="home" class="section">
-        <!-- carousel -->
-        <div class="carousel">
-            <!-- list and item -->
-            <div class="list">
-                <div class="item">
-                    <img src="image/drJoseRizal.png" alt="Dr.Joze Rizal">
-                    <div class="content">
-                        <div class="author">PHILHIST</div>
-                        <div class="title">JOSE RIZAL</div>
-                        <div class="topic">WRITER</div>
-                        <div class="des">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
-                        </div>
-                        <div class="buttons">
-                            <button>READ MORE</button>
-                            <button>SUBSCRIBE</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Other carousel items remain the same -->
-                <div class="item">
-                    <img src="image/emilioAguinaldo.webp" alt="Emilio Aguuinaldo">
-                    <div class="content">
-                        <div class="author">PHILHIST</div>
-                        <div class="title">EMILIO AGUINALDO</div>
-                        <div class="topic">PRESIDENT</div>
-                        <div class="des">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
-                        </div>
-                        <div class="buttons">
-                            <button>READ MORE</button>
-                            <button>SUBSCRIBE</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="image/apolinarioMabini.webp" alt="Apolinario Mabini">
-                    <div class="content">
-                        <div class="author">PHILHIST</div>
-                        <div class="title">APOLINARIO MABINI</div>
-                        <div class="topic">REBEL</div>
-                        <div class="des">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
-                        </div>
-                        <div class="buttons">
-                            <button>READ MORE</button>
-                            <button>SUBSCRIBE</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="image/andresBonifacio.jpg" alt="Andres Bonifacio">
-                    <div class="content">
-                        <div class="author">PHILHIST</div>
-                        <div class="title">ANDRES BONIFACIO</div>
-                        <div class="topic">POLITICIAN</div>
-                        <div class="des">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
-                        </div>
-                        <div class="buttons">
-                            <button>READ MORE</button>
-                            <button>SUBSCRIBE</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- list thumnail -->
-            <div class="thumbnail">
-                <div class="item">
-                    <img src="image/drJoseRizal.png" alt="Dr. Joze Rizal">
-                    <div class="content">
-                        <div class="title">
-                            JOSE RIZAL
-                        </div>
-                        <div class="description">
-                            Description
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="image/emilioAguinaldo.webp" alt="Emilio Aguinaldo">
-                    <div class="content">
-                        <div class="title">
-                            EMILIO AGUINALDO
-                        </div>
-                        <div class="description">
-                            Description
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="image/apolinarioMabini.webp" alt="Apolinario Mabini">
-                    <div class="content">
-                        <div class="title">
-                            APOLINARIO MABINI
-                        </div>
-                        <div class="description">
-                            Description
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="image/andresBonifacio.jpg" alt="Andres Bonifacio">
-                    <div class="content">
-                        <div class="title">
-                           ANDRES BONIFACIO
-                        </div>
-                        <div class="description">
-                            Description
-                        </div>
-                    </div>
-                </div>
-            </div>
-           
-            <div class="arrows">
-                <button id="prev"><</button>
-                <button id="next">></button>
-            </div>
-            
-            <div class="time"></div>
-        </div>
-    </section>
 
-    <!-- Section 2: Heroes Details -->
-    <section id="heroes" class="section">
-        <div class="section-content">
-            <h1>Filipino Heroes</h1>
-            <div class="heroes-grid">
-                <div class="hero-card">
-                    <img src="image/drJoseRizal.png" alt="Dr. Jose Rizal">
-                    <h3>Jose Rizal</h3>
-                    <p>National hero and polymath who wrote novels that sparked revolution</p>
-                </div>
-                <div class="hero-card">
-                    <img src="image/emilioAguinaldo.webp" alt="Emilio Aguinaldo">
-                    <h3>Emilio Aguinaldo</h3>
-                    <p>First President of the Philippines and military leader</p>
-                </div>
-                <div class="hero-card">
-                    <img src="image/apolinarioMabini.webp" alt="Apolinario Mabini">
-                    <h3>Apolinario Mabini</h3>
-                    <p>Known as the "Sublime Paralytic" and "Brains of the Revolution"</p>
-                </div>
-                <div class="hero-card">
-                    <img src="image/andresBonifacio.jpg" alt="Andres Bonifacio">
-                    <h3>Andres Bonifacio</h3>
-                    <p>Founder of the Katipunan and a key figure in the Philippine Revolution</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="#logo" class="logo">Lakan</a>
+          <ul class="nav-links">
+              <li><a href="#home" class="active">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#objectives">Objectives</a></li>
+              <li><a href="#read">Read</a></li>
+              <li><a href="#contact">Contact</a></LI>
+          </ul>
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+  </nav>
 
-    <!-- Section 3: About Us -->
-    <section id="about" class="section">
-        <div class="about-us">
-            <div class="about-us-content">
-                <h1>About us</h1>
-                <p>Our website provides free access to historical stories and biographies of notable Filipino heroes. We aim to educate and inspire by sharing the lives of those who shaped our nation's history. Discover their stories, honor their legacy.</p>
-            </div>
-            <div class="iphone-frame">
-                <div class="iphone-notch"></div>
-                <div class="iphone-screen">
-                    <iframe id="website-preview" src="about:blank"></iframe>
-                    <div class="reflection"></div>
-                    <div class="home-indicator"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 4: Objectives -->
-    <section id="objectives" class="section">
-        <div class="section-content">
-            <h1>Our Main Objectives</h1>
-            <div class="objectives-container">
-                <div class="objective-item">
-                    <div class="objective-icon">🔍</div>
-                    <h3>Research & Documentation</h3>
-                    <p>Collect and preserve historical accounts of Filipino heroes for future generations</p>
-                </div>
-                <div class="objective-item">
-                    <div class="objective-icon">📚</div>
-                    <h3>Education</h3>
-                    <p>Provide accessible information about Philippine history and its heroes</p>
-                </div>
-                <div class="objective-item">
-                    <div class="objective-icon">🌏</div>
-                    <h3>Cultural Preservation</h3>
-                    <p>Promote Filipino identity and cultural heritage through history</p>
-                </div>
-                <div class="objective-item">
-                    <div class="objective-icon">💡</div>
-                    <h3>Inspiration</h3>
-                    <p>Inspire pride and patriotism by highlighting heroic deeds and sacrifices</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-        <!-- Section 5: Timeline -->
-<section id="timeline" class="section">
-    <div class="section-content">
-        <h1>Philippine Historical Timeline</h1>
-        <div class="timeline-container">
-            <div class="timeline-item timeline-left">
-                <div class="timeline-content">
-                    <h3>Pre-Colonial Period</h3>
-                    <h4>900-1521</h4>
-                    <p>Prior to Spanish colonization, the Philippines had flourishing trade relationships with neighboring Asian countries. Communities were organized around barangays led by datus, and practiced animistic beliefs alongside early forms of Islam and Buddhism. The society had a distinct social class structure and used gold as currency for trade.</p>
-                </div>
-            </div>
-            
-            <div class="timeline-item timeline-right">
-                <div class="timeline-content">
-                    <h3>Spanish Colonial Era</h3>
-                    <h4>1521-1898</h4>
-                    <p>Beginning with Magellan's arrival in 1521, Spain established colonial rule over the archipelago. The islands were named "Las Islas Filipinas" after King Philip II of Spain. This period saw the spread of Christianity, establishment of the encomienda system, and eventually the rise of local resistance movements. The period gave birth to the Propaganda Movement and revolutionary figures like Jose Rizal.</p>
-                </div>
-            </div>
-            
-            <div class="timeline-item timeline-left">
-                <div class="timeline-content">
-                    <h3>Philippine Revolution</h3>
-                    <h4>1896-1898</h4>
-                    <p>After Rizal's execution in 1896, open revolt broke out led by Andres Bonifacio and the Katipunan. Leadership later passed to Emilio Aguinaldo who proclaimed Philippine independence on June 12, 1898. The first Philippine Republic was established in Malolos, Bulacan, becoming the first constitutional democracy in Asia.</p>
-                </div>
-            </div>
-            
-            <div class="timeline-item timeline-right">
-                <div class="timeline-content">
-                    <h3>American Colonial Period</h3>
-                    <h4>1898-1946</h4>
-                    <p>Following Spain's defeat in the Spanish-American War, the Philippines was ceded to the United States. Filipinos resisted in the Philippine-American War (1899-1902). The American period introduced public education, English as an official language, and democratic institutions. Commonwealth status was established in 1935 with Manuel Quezon as president, preparing for eventual independence.</p>
-                </div>
-            </div>
-            
-            <div class="timeline-item timeline-left">
-                <div class="timeline-content">
-                    <h3>Japanese Occupation</h3>
-                    <h4>1942-1945</h4>
-                    <p>During World War II, Japan occupied the Philippines for over three years. This period saw widespread resistance through guerrilla movements. The liberation campaign, including the Battle of Leyte Gulf and the Battle of Manila, caused extensive destruction but ultimately freed the country from Japanese control.</p>
-                </div>
-            </div>
-            
-            <div class="timeline-item timeline-right">
-                <div class="timeline-content">
-                    <h3>Independence and Modern Era</h3>
-                    <h4>1946-Present</h4>
-                    <p>The Philippines gained independence on July 4, 1946. The country experienced periods of democratic governance interspersed with the authoritarian regime of Ferdinand Marcos (1965-1986). The People Power Revolution of 1986 restored democracy. Today, the Philippines continues to develop its democratic institutions while facing challenges of economic development, corruption, and establishing its role in international politics.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- Footer Section -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">PILIPINO</div>
-            <div class="footer-links">
-                <a href="#home">Home</a>
-                <a href="#heroes">Heroes</a>
-                <a href="#about">About us</a>
-                <a href="#objectives">Objectives</a>
-            </div>
-            <div class="footer-social">
-                <a href="#" aria-label="Facebook">📱</a>
-                <a href="#" aria-label="Twitter">📱</a>
-                <a href="#" aria-label="Instagram">📱</a>
-            </div>
-            <p class="copyright">© 2025 Bayaning Pilipino. All rights reserved.</p>
-        </div>
+  <section id="home">
     
-    </footer>
+  <div class="top">
+    <div class="vigan">
+        <img id="vigan" src="img/VIGAN.webp" alt="vigan photo">
+    </div>
+    <div class="type-writer">
+      <h1 id="typewriter">Know our, Heroes.</h1>
+      <p id="intro"> This website is dedicated to honoring Filipino heroes. <br> Here, 
+        you can learn about their lives, bravery, <br>and contributions to our nation’s freedom and identity. 
+        <br>Let their stories inspire you to love and serve the <br>Philippines with pride.</p>
+    </div>
+    <button id="learn-more"> <p id="learn-more-text">Learn more</p></button>
+  </div>
+  </section>
+   
+  <section id="about">
+    <div class="about">
+      <h1 class="about-us">About Us</h1>
+        <p id="about-us-text">We are a group of passionate individuals dedicated to preserving and sharing the stories of Filipino heroes. Our mission is to inspire patriotism by educating the next generation about the bravery, sacrifice, and values of our national icons.
+          Through this website, we aim to make history engaging and accessible—bringing the past to life so that we never forget the people who fought for our freedom and identity. Together, we honor their legacy and continue their vision for a better Philippines.
+        </p>
+       
+      </div>
+    
+    
+  </section>
 
-    <script src="main.js"></script>
-    <script src="scroll.js"></script>
+  <img src="img/intra.jpeg" alt="Intramuros picture" class="intramuros">
+  <img src="img/las casas.webp" alt="Las Casas De Acuzar image" class="las-casas">
+  <img src="img/ILOCOS.webp" alt="Vigan, Ilocos vintage Filipino house" class="ilocos">
+
+  <section id="objectives">
+    <div class="objectives">
+      
+      <h1 class="objectives-us">Objectives</h1>
+     </div>
+  </section>
+ 
+<!-- 
+  <section id="read">
+    <div class="read-us">
+      <h1 class="objectives-us">Objectives</h1>
+     </div>
+  </section>
+  -->
+  
+
+   <script src="WEB.JS"></script>
+   
 </body>
 </html>
