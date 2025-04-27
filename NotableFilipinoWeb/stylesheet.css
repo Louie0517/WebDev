@@ -403,23 +403,6 @@
     height: 100vh;
   }
 
-  .intramuros {
-    top: 60%;
-    bottom:50%;
-    width: 30rem;
-    height: auto;
-    transform: translate(-60%, -50%);
-    margin-left: 20rem;
-    
-  }
-
-  .las-casas {
-    top: 90%;
-    bottom: 45%;
-    transform: translate(-80%, -45%);
-    width: 19rem;
-   
-  }
 
   .ilocos {
     top: 60%;
