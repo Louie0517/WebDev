@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bayaniHub</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="WEB.CSS">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Meddon&display=swap" rel="stylesheet">
@@ -18,7 +18,8 @@
               <li><a href="#home" class="active">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#objectives">Objectives</a></li>
-              <li><a href="#read">Read</a></li>
+              <li><a href="#featured-slider">Read</a></li>
+              <li><a href="#resources">Resources</a></li>
               <li><a href="#contact">Contact</a></LI>
           </ul>
           <div class="burger">
@@ -39,43 +40,566 @@
       <p id="intro"> This website is dedicated to honoring Filipino heroes. <br> Here, 
         you can learn about their lives, bravery, <br>and contributions to our nation’s freedom and identity. 
         <br>Let their stories inspire you to love and serve the <br>Philippines with pride.</p>
-    </div>
-    <button id="learn-more"> <p id="learn-more-text">Learn more</p></button>
+        <button id="learn-more"> <p id="learn-more-text">Learn more</p></button>
+      </div>
+    
   </div>
   </section>
    
   <section id="about">
     <div class="about">
-      <h1 class="about-us">About Us</h1>
-        <p id="about-us-text">We are a group of passionate individuals dedicated to preserving and sharing the stories of Filipino heroes. Our mission is to inspire patriotism by educating the next generation about the bravery, sacrifice, and values of our national icons.
-          Through this website, we aim to make history engaging and accessible—bringing the past to life so that we never forget the people who fought for our freedom and identity. Together, we honor their legacy and continue their vision for a better Philippines.
-        </p>
-       
+
+      <h3 class="about-us">About Us</h3>
+      <div id="icons">
+
       </div>
+      <h1 class="tag-about">We Always Make <br>The Best</h1>
+      <p id="about-us-text">We are a group of passionate individuals dedicated to preserving and sharing the stories of Filipino heroes. 
+          Our mission is to inspire patriotism by educating the next generation about the bravery, sacrifice, and values of our national icons.
+          Through this website,  we aim to make history engaging and accessible—bringing the past to life so that we never forget the people 
+          who fought for our freedom and identity. Together, we honor their legacy and continue their vision for a better Philippines.
+        </p>
+        <img src="img/ILOCOS.webp" alt="Vigan, Ilocos vintage Filipino house" class="ilocos">
     
-    
+      </div>
   </section>
-
-  <img src="img/intra.jpeg" alt="Intramuros picture" class="intramuros">
-  <img src="img/las casas.webp" alt="Las Casas De Acuzar image" class="las-casas">
-  <img src="img/ILOCOS.webp" alt="Vigan, Ilocos vintage Filipino house" class="ilocos">
-
-  <section id="objectives">
-    <div class="objectives">
-      
-      <h1 class="objectives-us">Objectives</h1>
-     </div>
-  </section>
- 
-<!-- 
-  <section id="read">
-    <div class="read-us">
-      <h1 class="objectives-us">Objectives</h1>
-     </div>
-  </section>
-  -->
   
+  
+  <section id="objectives">
+    <div class="container">
+        <div class="objectives">
+            <!-- Objective 1 -->
+            <li class="objective-item">
+                <div class="objective-icon">1</div>
+                <div class="objective-content">
+                    <h4 class="objective-title">Educational Access</h4>
+                    <p>To democratize access to quality historical information about Philippine national heroes through free, easily accessible digital content.</p>
+                </div>
+            </li>
 
+            <!-- Objective 2 -->
+            <li class="objective-item">
+                <div class="objective-icon">2</div>
+                <div class="objective-content">
+                    <h4 class="objective-title">Historical Accuracy</h4>
+                    <p>To present thoroughly researched, fact-based biographical information that corrects historical misconceptions.</p>
+                </div>
+            </li>
+
+            <!-- Objective 3 -->
+            <li class="objective-item">
+                <div class="objective-icon">3</div>
+                <div class="objective-content">
+                    <h4 class="objective-title">National Identity Formation</h4>
+                    <p>To strengthen Filipino identity and patriotism by highlighting the values, sacrifices, and achievements of national heroes.</p>
+                </div>
+            </li>
+        </div>
+        <div class="horizontal">
+          <div class="obj-images">
+            <img class="slide" src="img/gen 1.png" alt="Image one">
+            <img  class="slide" src="img/gen 2.png" alt="Image two">
+            <img  class="slide" src="img/gen 3.jpg" alt="Image three">  
+           </div>
+        </div>
+
+    </div>
+</section>
+
+<!--Read-->
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.4/swiper-bundle.min.css">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+    
+    :root {
+      --primary: #ec994b;
+      --white: #ffffff;
+      --bg: #f5f5f5;
+      --button-bg: #db3c06;
+      --button-hover: #611c05;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    
+    
+    .container {
+      max-width: 1140px;
+      width: 100%;
+      padding: 0 15px;
+      margin: 0 auto;
+    }
+    
+    .section-heading {
+      font-size: 5rem;
+      color: var(--primary);
+      padding: 2rem 0;
+      text-align: center;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      
+    }
+    
+    #featured-slider {
+      padding: 4rem 0;
+      background-color: #1b1d20;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+    }
+
+    #disc {
+      color: white;
+      text-align: justify;
+      max-width: 90%;
+      margin-left: 3em;
+      font-size: 20px;
+    }
+    
+    .swiper {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 160px; 
+    }
+
+.swiper-container-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper {
+  position: relative;
+  z-index: 1;
+}
+
+.swiper-container-wrapper::before,
+.swiper-container-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 25%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.swiper-container-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #1b1d20 0%, rgba(29, 42, 63, 0) 100%);
+}
+
+.swiper-container-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #1b1d20 0%, rgba(29, 42, 63, 0) 100%);
+}
+
+.swiper-slide {
+  /* Keep your existing styles and add: */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 5px 15px rgba(0, 0, 0, 0.5);
+  transform-origin: center bottom;
+  transition: transform 0.5s, box-shadow 0.5s, opacity 0.5s;
+}
+
+.swiper-slide-prev,
+.swiper-slide-next {
+  opacity: 0.8;
+}
+
+/* Make non-active slides appear to fade below */
+.swiper-slide:not(.swiper-slide-active) {
+  transform: translateY(10px) scale(0.95);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+}
+    
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 380px;
+      height: 505px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, opocity 0.3s ease;
+      opacity: 0.8;
+      margin-top: 30PX;
+    }
+    
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      margin-top: 30px;
+      justify-self: center;
+    }
+    
+  .swiper-slide:hover {
+    transform: translateY(-10PX) scale(1.05);
+    opacity: 1;
+    z-index: 10;
+    transition: transform 0.5s ease, opacity 0.5s ease
+  }
+    .slide-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+      color: #fff;
+      transform:none ;
+      transition: none;
+    }
+    
+    
+    
+    .slide-title {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    
+    .slide-description {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      opacity: 0.9;
+      display: block; 
+      overflow: visible;
+    }
+    
+    
+    .read-more-btn {
+      display: inline-block;
+      padding: 8px 20px;
+      background-color: rgb(185, 65, 21);
+      color: var(--white);
+      border-radius: 20px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      height: 4em;
+    }
+    
+    .read-more-btn:hover {
+      background-color: var(--button-hover);
+      transform: translateY(-3px);
+    }
+    
+    .navigation-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      
+
+    }
+    
+    .nav-btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: var(--button-bg);
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .nav-btn:hover {
+      background-color: var(--button-hover);
+      transform: translateY(-3px);
+    }
+    
+    .nav-btn:active {
+      transform: translateY(-1px);
+    }
+    
+    /* Fixed pagination positioning */
+    .swiper-pagination {
+      position: absolute;
+      bottom: 80px !important; /* Move pagination up from the bottom */
+      width: 100% !important;
+      text-align: center;
+    }
+    
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      background-color: #fff;
+      opacity: 0.5;
+      margin: 0 5px;
+    }
+    
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+      background-color: var(--button-bg);
+    }
+    
+    .swiper-slide-active {
+      transform: scale(1.1);
+      z-index: 10;
+    }
+    
+    @media (max-width: 768px) {
+      .swiper-slide {
+        width: 250px;
+        height: 350px;
+      }
+      
+      .slide-title {
+        font-size: 1.2rem;
+      }
+      
+      .slide-description {
+        font-size: 0.8rem;
+      }
+      
+      .swiper-pagination {
+        bottom: 70px !important;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .swiper-slide {
+        width: 220px;
+        height: 300px;
+      }
+      
+      .navigation-buttons {
+        gap: 15px;
+      }
+      
+      .nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+      }
+      
+      .swiper-pagination {
+        bottom: 60px !important;
+      }
+
+     
+    }
+  </style>
+</head>
+<body>
+  <section id="featured-slider">
+    <h2 class="section-heading">Featured Stories</h2>
+    <p id="disc">The Spirit of a Nation” is a powerful and inspiring narrative that brings to life the stories of the Philippines' 
+      greatest heroes. From the intellectual brilliance of Dr. Jose Rizal, the resolute bravery of Andres Bonifacio, to the fierce leadership
+       of Emilio Aguinaldo and the unwavering courage of Gabriela Silang, this story weaves together their sacrifices, struggles,
+        and dreams for an independent nation. Set against the backdrop of Spanish colonization and the fight for freedom, 
+        it highlights the values of patriotism, unity, and love for country. As their legacies echo through generations, 
+        Bayani reminds every Filipino of the enduring spirit that shaped the nation’s identity and future.
+    </p>
+    <div class="container">
+      
+      <!-- Swiper -->
+      <div class="swiper-container-wrapper">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <img src="image/rizal.jpeg" alt="Story Image">
+            <div class="slide-content">
+              <h3 class="slide-title">The Mountain Journey</h3>
+              <p class="slide-description">Discover the breathtaking adventure through mountain peaks and valleys that will change your perspective forever.</p>
+              <button class="read-more-btn">Read More</button>
+            </div>
+          </div>
+          
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <img src="image/aguinaldo.png" alt="Story Image">
+            <div class="slide-content">
+              <h3 class="slide-title">Ocean Depths</h3>
+              <p class="slide-description">Explore the mysteries of the deep blue sea and the incredible creatures that inhabit it.</p>
+              <button class="read-more-btn">Read More</button>
+            </div>
+          </div>
+          
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <img src="image/del pilar.png" alt="Story Image">
+            <div class="slide-content">
+              <h3 class="slide-title">Urban Discovery</h3>
+              <p class="slide-description">Navigate through hidden urban landscapes and discover the untold stories of the metropolis.</p>
+              <button class="read-more-btn">Read More</button>
+            </div>
+          </div>
+          
+          <!-- Slide 4 -->
+          <div class="swiper-slide">
+            <img src="image/gomburza.png" alt="Story Image">
+            <div class="slide-content">
+              <h3 class="slide-title">Gomburza</h3>
+              <p class="slide-description">Witness the quiet courage that sparked a nation's fight for justice and freedom.</p>
+              <button class="read-more-btn">Read More</button>
+            </div>
+          </div>
+          
+          <!-- Slide 5 -->
+          <div class="swiper-slide">
+            <img src="image/luna.png" alt="Story Image">
+            <div class="slide-content">
+              <h3 class="slide-title">Antonio Luna</h3>
+              <p class="slide-description">Discover the bold strokes and fiery spirit of Juan Luna's timeless masterpieces.</p>
+              <button class="read-more-btn">Read More</button>
+            </div>
+          </div>
+          
+          <!-- Slide 6 -->
+          <div class="swiper-slide">
+            <img src="image/mabini.png" alt="Story Image">
+            <div class="slide-content">
+              <h3 class="slide-title">Apolinario Mabini</h3>
+              <p class="slide-description">Uncover the sharp mind and unshaken will behind a revolution's guiding light.</p>
+              <button class="read-more-btn">Read More</button>
+            </div>
+          </div>
+          
+          <!-- Slide 7 -->
+          <div class="swiper-slide">
+            <img src="image/Melchora.png" alt="Story Image">
+            <div class="slide-content">
+              <h3 class="slide-title">Melchora Aquino</h3>
+              <p class="slide-description">Experience the pristine beauty and deafening silence of the frozen wilderness.</p>
+              <button class="read-more-btn">Read More</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+      
+      <!-- Custom Navigation Buttons -->
+      <div class="navigation-buttons">
+        <button class="nav-btn swiper-button-prev-custom">❮</button>
+        <button class="nav-btn swiper-button-next-custom">❯</button>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.4/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow", 
+        grabCursor: true, 
+        centeredSlides: true, 
+        slidesPerView: "auto", 
+        loop: true, 
+        loopAdditionalSlides: 3,
+        autoplay: { 
+            delay: 4000, 
+            reverseDirection: false, // Makes slides move right instead of left
+            disableOnInteraction: false // Keeps autoplay active after user interaction
+        },
+        coverflowEffect: { 
+            rotate: 30, 
+            stretch: 0, 
+            depth: 200, 
+            modifier: 1, 
+            slideShadows: true 
+        },
+        pagination: { 
+            el: ".swiper-pagination", 
+            clickable: true 
+        },
+        navigation: { 
+            nextEl: ".swiper-button-next", 
+            prevEl: ".swiper-button-prev" 
+        }
+    });
+      
+      
+      document.querySelector('.swiper-button-prev-custom').addEventListener('click', function() {
+        swiper.slidePrev();
+      });
+      
+      document.querySelector('.swiper-button-next-custom').addEventListener('click', function() {
+        swiper.slideNext();
+      });
+    });
+
+  </script>
+</body>
+</html>
+
+
+<section id="resources">
+  <div class="resources-container">
+      <h2 class="section-title">Educational Resources</h2>
+      <div class="resources-grid">
+          <!-- Resource 1 -->
+          <div class="resource-card">
+              <div class="resource-icon">📚</div>
+              <h3 class="resource-title">Lesson Plans</h3>
+              <p class="resource-text">Curriculum-aligned lesson plans for teachers to effectively integrate hero biographies into classroom learning.</p>
+              <a href="#" class="resource-link">Access Resources →</a>
+          </div>
+          
+          <!-- Resource 2 -->
+          <div class="resource-card">
+              <div class="resource-icon">🎓</div>
+              <h3 class="resource-title">Interactive Learning</h3>
+              <p class="resource-text">Interactive modules, quizzes, and games to engage students in exploring Philippine national heroes.</p>
+              <a href="#" class="resource-link">Start Learning →</a>
+          </div>
+          
+          <!-- Resource 3 -->
+          <div class="resource-card">
+              <div class="resource-icon">📝</div>
+              <h3 class="resource-title">Research Guides</h3>
+              <p class="resource-text">Comprehensive guides and historical references for students and researchers.</p>
+              <a href="#" class="resource-link">Explore Guides →</a>
+          </div>
+
+      </div>
+  </div>
+</section>
+
+<img id="museum" src="img/map.jpg" alt="Manila Museum">
+  <section id="contact">
+    
+<div class="footer-form-container">
+
+  <h2>We Value Your Suggestions</h2>
+  <form id="suggestion-form" action="#" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+    <label for="message">Your Suggestion:</label>
+    <textarea id="message" name="message" rows="4" placeholder="Let us know your thoughts!" required></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+  </section>
+  
    <script src="WEB.JS"></script>
    
 </body>
