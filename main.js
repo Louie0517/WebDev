@@ -1,6 +1,26 @@
-
+// Register ScrollTrigger Plugin
 gsap.registerPlugin(ScrollTrigger);
 
+// GSAP Scrolling Animation Example: Section Fade-In
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('section');
+
+    sections.forEach((section, index) => {
+        gsap.from(section, {
+            opacity: 0,
+            y: 50, // Slide up effect
+            duration: 1,
+            scrollTrigger: {
+                trigger: section,
+                start: "top 80%", // Trigger animation when section enters viewport
+                end: "bottom 60%", // End point of trigger
+                toggleActions: "play reset play reset", // Play once
+            },
+        });
+    });
+});
+
+// Menu Toggle (No Changes to This Part)
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav-links');
 
@@ -15,14 +35,14 @@ navLinks.forEach(link => {
         nav.classList.remove('nav-active');
         burger.classList.remove('toggle');
     });
-})
+});
 
-// typewriter effect
+// Typewriter Effect (No Changes to This Part)
 document.addEventListener('DOMContentLoaded', function () {
-    const text = "Know our Heroes.";
+    const text = "Know our, Heroes.";
     const typewriter = document.querySelector('#typewriter');
     const section = document.getElementById('home');
-    
+
     let i = 0;
     let typingInterval;
     let currentlyVisible = false;
@@ -32,18 +52,18 @@ document.addEventListener('DOMContentLoaded', function () {
             typewriter.textContent += text.charAt(i);
             i++;
         } else {
-            clearInterval(typingInterval); 
+            clearInterval(typingInterval);
         }
     }
 
     function resetTypewriter() {
-        typewriter.textContent = ''; 
-        i = 0; 
+        typewriter.textContent = '';
+        i = 0;
     }
 
     function isInViewPort(element) {
         const rect = element.getBoundingClientRect();
-        return rect.top < window.innerHeight && rect.bottom > 0; 
+        return rect.top < window.innerHeight && rect.bottom > 0;
     }
 
     window.addEventListener('scroll', () => {
@@ -51,18 +71,37 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (inView && !currentlyVisible) {
             currentlyVisible = true;
-            resetTypewriter(); 
-            typingInterval = setInterval(type, 100); 
+            resetTypewriter();
+            typingInterval = setInterval(type, 100);
         } else if (!inView && currentlyVisible) {
             currentlyVisible = false;
-            clearInterval(typingInterval); 
+            clearInterval(typingInterval);
         }
     });
 });
+document.addEventListener('DOMContentLoaded', () => {
+    gsap.registerPlugin(ScrollTrigger);
 
+    // Select all objective items
+    const objectives = document.querySelectorAll('tag-about');
 
-// tracktor of hover effect on navbar depends on scroll screeen
-document.addEventListener("DOMContentLoaded", function() {
+    objectives.forEach((item, index) => {
+        gsap.from(item, {
+            opacity: 0, // Start invisible
+            y: 90, // Move up from 50px
+            duration: 0.2, // Animation duration
+            delay: index * 0.2, // Delay for staggering (optional)
+            scrollTrigger: {
+                trigger: item, // Each objective triggers the animation individually
+                start: "top 80%", // Animation starts when the element enters the viewport
+                toggleActions: "play reset play reset", // Play the animation only once
+            },
+        });
+    });
+});
+
+// Navbar Highlight Effect (No Changes to This Part)
+document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll(".nav-links a");
 
@@ -85,3 +124,130 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Select all objective items
+    const objectives = document.querySelectorAll('.objective-item');
+
+    objectives.forEach((item, index) => {
+        gsap.from(item, {
+            opacity: 0, // Start invisible
+            y: 90, // Move up from 50px
+            duration: 0.2, // Animation duration
+            delay: index * 0.2, // Delay for staggering (optional)
+            scrollTrigger: {
+                trigger: item, // Each objective triggers the animation individually
+                start: "top 90%", // Animation starts when the element enters the viewport
+                toggleActions: "play reset play reset", // Play the animation only once
+            },
+        });
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollHorizontal = document.querySelector('.obj-images'); 
+    const images = document.querySelectorAll('.obj-images .slide'); 
+
+    const totalWidth = scrollHorizontal.scrollWidth; 
+    gsap.to(scrollHorizontal, {
+        x: `-${totalWidth - scrollHorizontal.offsetWidth}px`, 
+        duration: 10, 
+        repeat: -1, 
+        ease: "linear", 
+        modifiers: {
+            x: (x) => `${parseFloat(x) % totalWidth}px`, 
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollHorizontal = document.querySelector('.obj-images');
+    const slides = document.querySelectorAll('.obj-images .slide');
+    
+    // Initialize animation speed
+    let animationSpeed = 20;
+    let animation;
+    
+    // Initialize GSAP
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // Set up entrance animations for slides
+    function setupEntranceAnimations() {
+        slides.forEach((slide, index) => {
+            // Initial state
+            gsap.set(slide, { 
+                opacity: 0,
+                scale: 0.8,
+                y: 20
+            });
+            
+            // Create observer for each slide
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Animate in when visible
+                        gsap.to(slide, {
+                            opacity: 1,
+                            scale: 1,
+                            y: 0,
+                            duration: 0.7,
+                            ease: "power2.out",
+                            onComplete: () => {
+                                slide.classList.add('active');
+                            }
+                        });
+                        
+                        // Only trigger once
+                        observer.unobserve(slide);
+                    }
+                });
+            }, { threshold: 0.3 });
+            
+            observer.observe(slide);
+        });
+    }
+    
+    // Start the scrolling animation
+    function startAnimation() {
+        // Clear any existing animation
+        if (animation) {
+            animation.kill();
+        }
+        
+        const totalWidth = scrollHorizontal.scrollWidth / 2; // Divide by 2 because we duplicated slides
+        
+        animation = gsap.to(scrollHorizontal, {
+            x: `-${totalWidth}px`,
+            duration: animationSpeed,
+            repeat: -1,
+            ease: "linear",
+            modifiers: {
+                x: (x) => `${parseFloat(x) % totalWidth}px`,
+            }
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+       // Select all objective items
+       const objectives = document.querySelectorAll('.resource-card');
+
+       objectives.forEach((item, index) => {
+           gsap.from(item, {
+               opacity: 0, 
+               y: 90, 
+               duration: 0.7, 
+               delay: index * 0.2, 
+               scrollTrigger: {
+                   trigger: item, 
+                   start: "top 80%", 
+                   toggleActions: "play reset play reset", 
+               },
+           });
+       });
+   });
+   
+   
