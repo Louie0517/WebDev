@@ -12,7 +12,9 @@
   
   body {
     overflow: auto;
-    background-color: rgb(10, 10, 15);
+    background-color: black;
+    min-height: 100vh;
+    margin: 0;
   }
   
   .top {
@@ -43,10 +45,10 @@
   /* Intro Text */
 
   .type-writer {
-    outline: solid 2em orange;
     height: 15em;
     margin-bottom: 9em;
   }
+
   #typewriter {
     display: inline-block;
     align-items: flex-start;
@@ -57,7 +59,7 @@
     max-width: 100%;
     padding: 0.5rem;
     font-family:Georgia, 'Times New Roman', Times, serif;
-    outline: solid 1em blue;
+    
   }
 
   @keyframes typing {
@@ -247,6 +249,7 @@
 
 
   #learn-more {
+    display: flexbox;
     background-color: rgb(255, 107, 1);
     width: 10.8em;
     height: 3.4em;
@@ -258,8 +261,8 @@
     cursor: pointer;
     transition: all 0.5s ease;
     display: flex;
-    margin-right: -90em;
-    margin-top: 25em;
+    margin-right: 40em;
+    margin-bottom:20%;
   }
 
   #learn-more-text {
@@ -332,85 +335,260 @@
 
 }
 
-  #about {
-    width: 100%;
-    height: 70vh;
-    background-color: rgb(72, 24, 27);
-    justify-content: center;
-    align-items: center;
-  }
-  .about {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
-   
-  }
+ #about {
+  width: 100%;
+  height: 77vh;
+ }
 
+ .about {
+  justify-content: center;
+  align-items: center;
+ }
+
+ .about-us {
+  font-size: 1.8em;
+  color: white;
+  justify-self:right;
+  margin-top: 4em;
+  margin-right: 25rem;
+  color: chocolate;
+ }
+
+ .tag-about {
+  justify-self: flex-end;
+  margin-right: 3em;
+ }
+
+ #about-us-text {
+  color: white;
+  justify-self: flex-end;
+  margin-right: 6em;
+  margin-top: 1rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  max-width: 31%;
+  text-align: justify;
+ }
+
+ .ilocos {
+  width: 40em;
+  height: auto;
+  border-radius: 2em;
+  margin-top: -50%;
+  margin-left: 4%;
   
-  .about-us {
-    font-size: 70px;
-    font-weight: bold;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    color: white;
-    margin: -6.5em -8em 0 1em;
-    white-space: nowrap;
-    display: flex;
-    flex-direction: column;
-    
-  }
+ }
 
-  @media screen and (max-width: 768px) {
-    .about-us {
-      font-size: 40px;
-      font-family: 'segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0 -6em 16em 20px;
-    }
-  } 
-
-  #about-us-text {
-    color: white;
-    overflow-wrap: break-word;
-    max-width: 80%;
-    text-align: center;
-    font-size:1.1em;
-    display: flex;
-    margin: 0 -11em 15rem;
-    justify-content: center;
-    flex-direction: column;
-    align-items: flex-start;
-   
-  }
-  
-  @media screen and (max-width: 768px) {
-    #about-us-text {
-      font-size: 15px;
-      margin: 0 -3.9rem 20rem -40px;
-      justify-items: center;
-    }
-  }
-
-    
   
   /* objective section*/
 
   #objectives {
-    width: 100vw;
+    width: 90%;
     height: 100vh;
+    justify-self: center;
+    border-radius: 2em;
+    z-index: -1;
+  
   }
-
-
-  .ilocos {
-    top: 60%;
-    bottom: 50%;
-    margin-right: -50rem;
-    transform: translate(-50%, -60%);
-    width: 25rem;
-   
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
   }
+  
+  
+ 
+.objectives-item {
+  justify-content: flex-wrap;
+}
+.objective-icon {
+  color: white;
+  font-size: 1.5em;
+  font-style: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: chocolate;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 1.5rem;
+  margin-top: 2em;
+  margin-bottom: -2.4em;
+  margin-left:2rem;
+  transform: translate(2em -2.4em);
+ padding-left: 0.7rem;
+}
+.objective-title {
+  color: white;
+  font-size: 2rem;
+  margin-left: 2.5em;
+  
+}
 
-  /* hover effect for these three images*/
+.objective-content p {
+  color: white;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 50%;
+  text-align: justify;
+  margin-left: 5em;
+  
+}
+
+.horizontal {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.obj-images {
+  display: flex;
+  gap: 5%;
+}
+
+.slide {
+  width: auto;
+  height: 300px;
+  flex-shrink: 0;
+  margin-top: 6em;
+}
+
+/*resources*/
+
+#resources {
+  padding: 5rem 0;
+ 
+  width: auto;
+  height: 100vh;
+}
+
+.resources-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.resource-card {
+  background-color: rgb(52, 46, 40);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.resource-icon {
+  font-size: 3rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.resource-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ffe4e4;
+}
+
+.resource-text {
+  margin-bottom: 1.5rem;
+  color: #ffe4e4;
+}
+
+.resource-link {
+  display: inline-block;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* contact */
+
+#contact {
+  width: 100vw;
+  height: 100vh;
+  background-color: #421515e7;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Footer Styling */
+#footer {  
+  color: white; 
+  padding: 2em;
+  text-align: center;
+}
+
+/* Form Container */
+.footer-form-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 2em;
+  background-color: #a3a399; 
+  border-radius: 8px;
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+/* Form Elements */
+#suggestion-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em; 
+}
+
+#suggestion-form label {
+  font-size: 1rem;
+  text-align: left; 
+}
+
+#suggestion-form input,
+#suggestion-form textarea {
+  width: 100%;
+  padding: 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+#suggestion-form input:focus,
+#suggestion-form textarea:focus {
+  border-color: #007BFF; 
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.6);
+}
+
+/* Submit Button */
+#suggestion-form button {
+  background-color: #f08819; 
+  color: white;
+  padding: 0.8em;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#suggestion-form button:hover {
+  background-color: #f08411d5; 
+}
+
+#suggestion-form button:active {
+  background-color: #ed8414bd; 
+}
+
+#museum {
+  width: 40em;
+  position: relative;
+  margin-left: 38em;
+  margin-top: 62%;
+  z-index: 2;
+}
