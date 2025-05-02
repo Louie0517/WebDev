@@ -1,5 +1,6 @@
-// Register ScrollTrigger Plugin
+
 gsap.registerPlugin(ScrollTrigger);
+
 
 // GSAP Scrolling Animation Example: Section Fade-In
 document.addEventListener('DOMContentLoaded', () => {
@@ -36,6 +37,7 @@ navLinks.forEach(link => {
         burger.classList.remove('toggle');
     });
 });
+
 
 // Typewriter Effect (No Changes to This Part)
 document.addEventListener('DOMContentLoaded', function () {
@@ -79,8 +81,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     gsap.registerPlugin(ScrollTrigger);
+
 
     // Select all objective items
     const objectives = document.querySelectorAll('tag-about');
@@ -133,14 +141,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     objectives.forEach((item, index) => {
         gsap.from(item, {
-            opacity: 0, // Start invisible
-            y: 90, // Move up from 50px
-            duration: 0.2, // Animation duration
-            delay: index * 0.2, // Delay for staggering (optional)
+            opacity: 0,
+            y: 90, 
+            duration: 0.2, 
+            delay: index * 0.2, 
             scrollTrigger: {
-                trigger: item, // Each objective triggers the animation individually
-                start: "top 90%", // Animation starts when the element enters the viewport
-                toggleActions: "play reset play reset", // Play the animation only once
+                trigger: item, 
+                start: "top 90%", 
+                toggleActions: "play reset play reset", 
             },
         });
     });
@@ -184,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 y: 20
             });
             
-            // Create observer for each slide
+            
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -232,7 +240,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-       // Select all objective items
        const objectives = document.querySelectorAll('.resource-card');
 
        objectives.forEach((item, index) => {
@@ -250,4 +257,51 @@ document.addEventListener('DOMContentLoaded', () => {
        });
    });
    
-   
+   // botton animation 
+
+gsap.to("#learn-more", {
+    y: -10,
+    duration: 0.5,
+    repeat: -1,
+    yoyo: true,
+    ease: "power1.inOut"
+});
+
+document.querySelector("#learn-more").addEventListener("mouseenter", () => {
+    gsap.to("learn-more", { scale: 1.2, duration: 0.3});
+});
+
+document.querySelector("#learn-more").addEventListener("mouseleave", () => {
+    gsap.to("#learn-more", { scale: 1, duration: 0.2});
+});
+
+document.getElementById("learn-more").addEventListener("click", () => {
+    document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+  });
+  
+
+document.querySelectorAll(".resource-card").forEach(card => {
+    card.addEventListener("mouseenter", () => {
+      gsap.to(card, { y: -10, duration: 0.3, boxShadow: "0 8px 12px rgba(0, 0, 0, 0.3)" });
+    });
+  
+    card.addEventListener("mouseleave", () => {
+      gsap.to(card, { y: 0, duration: 0.3, boxShadow: "0 4px 6px rgba(0, 0, 0, 0.2)" });
+    });
+  });
+
+
+  
+gsap.to(".about-button", {
+    y: -10,
+    duration: 0.5,
+    repeat: -1,
+    yoyo: true,
+    ease: "power1.inOut"
+});
+
+
+document.querySelector(".about-button").addEventListener("click", () => {
+    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+  });
+  
