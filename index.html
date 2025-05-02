@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bayaniHub</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="WEB.CSS">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Meddon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="image/logo.png">
 </head>
 
 
@@ -40,7 +43,7 @@
       <p id="intro"> This website is dedicated to honoring Filipino heroes. <br> Here, 
         you can learn about their lives, bravery, <br>and contributions to our nation’s freedom and identity. 
         <br>Let their stories inspire you to love and serve the <br>Philippines with pride.</p>
-        <button id="learn-more"> <p id="learn-more-text">Learn more</p></button>
+        <button id="learn-more"><p id="learn-more-text">Learn more</p></button>
       </div>
     
   </div>
@@ -59,14 +62,19 @@
           Through this website,  we aim to make history engaging and accessible—bringing the past to life so that we never forget the people 
           who fought for our freedom and identity. Together, we honor their legacy and continue their vision for a better Philippines.
         </p>
+        
         <img src="img/ILOCOS.webp" alt="Vigan, Ilocos vintage Filipino house" class="ilocos">
-    
+        <div><button class="about-button"><p>Discover Us</p></button></div>
+        
       </div>
   </section>
   
-  
+  <div class="obj"><p>Our Objectives</p>
+    <h2>List of Objectives</h2></div>
+
   <section id="objectives">
     <div class="container">
+      
         <div class="objectives">
             <!-- Objective 1 -->
             <li class="objective-item">
@@ -139,7 +147,7 @@
     
     .section-heading {
       font-size: 5rem;
-      color: var(--primary);
+      color: rgb(185, 65, 21);
       padding: 2rem 0;
       text-align: center;
       font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -546,17 +554,20 @@
 </body>
 </html>
 
-
+<!-- Resources Section-->
 <section id="resources">
   <div class="resources-container">
-      <h2 class="section-title">Educational Resources</h2>
+      <p class="section-title">Educational Resources</p>
+     <div class="insight">
+      <h1>You can learn also with our provided resources for learning.</h1>
+     </div>
       <div class="resources-grid">
           <!-- Resource 1 -->
           <div class="resource-card">
               <div class="resource-icon">📚</div>
               <h3 class="resource-title">Lesson Plans</h3>
               <p class="resource-text">Curriculum-aligned lesson plans for teachers to effectively integrate hero biographies into classroom learning.</p>
-              <a href="#" class="resource-link">Access Resources →</a>
+              <a href="https://ncca.gov.ph/wp-content/uploads/2021/09/PHILIPPINE-HISTORY-SOURCE-BOOK-FINAL-SEP022021.pdf" class="resource-link">Access Resources</a>
           </div>
           
           <!-- Resource 2 -->
@@ -564,7 +575,7 @@
               <div class="resource-icon">🎓</div>
               <h3 class="resource-title">Interactive Learning</h3>
               <p class="resource-text">Interactive modules, quizzes, and games to engage students in exploring Philippine national heroes.</p>
-              <a href="#" class="resource-link">Start Learning →</a>
+              <a href="https://www.proprofs.com/quiz-school/topic/philippine-history" class="resource-link">Start Learning</a>
           </div>
           
           <!-- Resource 3 -->
@@ -572,7 +583,7 @@
               <div class="resource-icon">📝</div>
               <h3 class="resource-title">Research Guides</h3>
               <p class="resource-text">Comprehensive guides and historical references for students and researchers.</p>
-              <a href="#" class="resource-link">Explore Guides →</a>
+              <a href="https://www.jstor.org/journal/philstud" class="resource-link">Explore Guides</a>
           </div>
 
       </div>
@@ -580,6 +591,7 @@
 </section>
 
 <img id="museum" src="img/map.jpg" alt="Manila Museum">
+
   <section id="contact">
     
 <div class="footer-form-container">
@@ -598,9 +610,32 @@
     <button type="submit">Submit</button>
   </form>
 </div>
+<div id="yo"> <p>Contact us</p></div>
+<div class="notify">
+  <p id="mamamo"> You can easily contact here at our socials for more beter
+     suggestions of correction to enhance our project websites.</p>
+</div>
+<div id="icons">
+  <a href="https://www.facebook.com/PhilippinesHistory/" target="_blank">
+    <box-icon class="slayed" type="logo" name="facebook-square"></box-icon>
+  </a>
+
+  <a href="https://www.youtube.com/playlist?list=PLRD2ehGoMtsxYhMeBeeURcqmpzBWVo10B" target="_blank">
+    <box-icon class="slayed" type="logo" name="youtube"></box-icon>
+  </a>
+  
+  
+  <a href="https://www.tiktok.com/tag/philippinehistory" target="_blank">
+    <box-icon class="slayed" type="logo" name="tiktok"></box-icon>
+  </a>
+  
+  <a href="https://x.com/phzpodcast" target="_blank">
+    <box-icon class="slayed" type="logo" name="twitter"></box-icon>
+  </a>
+</div>
   </section>
   
-   <script src="main.js"></script>
+   <script src="WEB.JS"></script>
    
 </body>
 </html>
