@@ -63,6 +63,32 @@ body {
   
 }
 
+@media screen and (max-width: 600px) {
+  
+  #typewriter {
+    font-size: 2.6em !important;
+    font-style: italic;
+  }
+
+  #intro {
+    margin-left: 1%;
+    text-align: justify;
+    white-space: nowrap;
+  }
+
+  #learn-more {
+    width: 30% !important;
+    border-radius: 1.3em !important;
+    margin-right: 80% !important;
+  }
+
+  #learn-more-text {
+    margin-top: 2.3em !important;
+    font-size: 20px !important;
+  }
+
+}
+
 @keyframes typing {
   from { width: 0}
   to { width : 16ch}
@@ -104,6 +130,9 @@ body {
   mask-image: linear-gradient(to bottom, rgba(72, 24, 27, 1) 30%, rgba(0,0,0,0) 20%);
   -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -158,7 +187,8 @@ h1 {
   gap: 30px;
   padding: 0;
   flex-wrap: wrap;
-  justify-content:flex-start; /* Aligns navigation links to the left */
+  /* Aligns navigation links to the left */
+  justify-content:flex-start; 
   margin-right: 90px;
 }
 
@@ -204,9 +234,9 @@ h1 {
   width: 100%;
 }
 
+
+
 /* Learn More Button*/
-
-
 #learn-more {
   display: flex;
   background-color: rgb(185, 65, 21);
@@ -254,12 +284,14 @@ h1 {
 
 #about {
 width: 100%;
-height: 80vh;
+height: 110vh;
+
 }
 
 .about {
 justify-content: center;
 align-items: center;
+
 }
 
 .about-us {
@@ -269,6 +301,46 @@ justify-self:right;
 margin-top: 4em;
 margin-right: 25rem;
 color: chocolate;
+}
+
+@media screen and (max-width: 600px) {
+  .about-us, 
+  .tag-about {
+  position: relative;
+  }
+  .about-us {
+    left: 8% !important;
+    font-size: 30px !important;
+   position: absolute;
+   top: 6%;
+   white-space: nowrap;
+   margin: 0 !important;
+  }
+
+  .tag-about {
+    white-space: nowrap;
+    margin-right: 10% !important;
+   
+  }
+
+  #about-us-text {
+    margin-right: 9% !important;
+  }
+
+  .ilocos {
+    border-radius: 1.8em;
+  }
+
+  .about-button {
+    width: 90% !important;
+   margin-left: 2em !important;
+   border-radius: 1em !important;
+  }
+
+  .about-button p {
+    font-size: 20px !important;
+  }
+  
 }
 
 .tag-about {
@@ -324,8 +396,8 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
   transform: translate(-46%, -19%);
   text-align: center;
   white-space: nowrap;
-  
 }
+
 
 .obj p {
   font-style: italic;
@@ -345,8 +417,10 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
   justify-self: center;
   border-radius: 2em;
   z-index: -1;
-
 }
+
+
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -395,23 +469,20 @@ text-align: justify;
 margin-left: 5em;
 
 }
-
-.horizontal {
-width: 100%;
-overflow: hidden;
-position: relative;
+/*edit*/
+.jose-transparent {
+  margin-right: 20%;
+  margin-top:7%;
+ 
 }
 
-.obj-images {
-display: flex;
-gap: 5%;
-}
+.jose {
+ width: 200%;
+ mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 30%, rgba(0,0,0,0) 20%);
+ -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+ background: radial-gradient(circle at center, rgba(219, 93, 40, 0.6) 10%, rgba(0, 0, 0, 0) 70%);
+   
 
-.slide {
-width: auto;
-height: 300px;
-flex-shrink: 0;
-margin-top: 6em;
 }
 
 /*resources*/
@@ -419,7 +490,7 @@ margin-top: 6em;
 #resources {
 padding: 5rem 0;
 width: auto;
-height: 80vh;
+height: 70vh;
 }
 
 .section-title {
@@ -434,7 +505,7 @@ margin-bottom: 2%;
 }
 
 .insight h1 {
-color: rgb(192, 58, 9);;
+color: rgb(192, 58, 9);
 }
 
 .resources-container {
@@ -447,45 +518,154 @@ padding: 0 2rem;
 .resources-grid {
 display: grid;
 grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-gap: 2rem;
+gap: 5rem;
 }
 
-.resource-card {
+.resource-card-1 {
 background-color: rgb(69, 61, 54);
+background: linear-gradient(rgba(0, 0, 0, 0.792), rgba(0, 0, 0, 0.615)), url(img/img1.jpg);
+background-size: cover;
+margin-top: 2em;
+height: 100%;
+width: 115%;
 border-radius: 8px;
 padding: 2rem;
 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 text-align: center;
 }
 
-.resource-icon {
-font-size: 3rem;
-color: var(--accent);
-margin-bottom: 1rem;
-}
+
+.resource-card-2 {
+  background-color: rgb(69, 61, 54);
+  background: linear-gradient(rgba(0, 0, 0, 0.792), rgba(0, 0, 0, 0.615)), url(img/img2.avif);
+  background-size: cover;
+  margin-top: 2em;
+  height: 100%;
+  width: 115%;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  }
+
+  
+.resource-card-3 {
+  background-color: rgb(69, 61, 54);
+  background: linear-gradient(rgba(0, 0, 0, 0.792), rgba(0, 0, 0, 0.615)), url(img/img3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 2em;
+  height: 100%;
+  width: 115%;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  }
+
 
 .resource-title {
-font-family: var(--font-heading);
-font-size: 1.5rem;
-margin-bottom: 1rem;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+font-size: 2.3rem;
+margin-top: 2rem;
 color: white;
+text-align: left;
 }
 
-.resource-text {
-margin-bottom: 1.5rem;
+.resource-text-1 {
+
 color: #ffe4e4;
+text-align:start;
 
 }
+
+
+.resource-text-2 {
+ margin-top: 2%;
+  color: #ffe4e4;
+  text-align:start;
+ 
+  }
+
+
+  .resource-card-2 #start {
+    white-space: nowrap;
+    margin-right: 9em;
+    font-size:1.2em;
+    color: #f65004;
+    
+  }
+
+  
+.resource-text-3 {
+  margin-top: 2rem;
+  color: #ffe4e4;
+  text-align:start;
+  
+  }
 
 .resource-link {
 display: inline-block;
-color: rgb(223, 194, 6);
+color: rgb(192, 58, 9);
 text-decoration: none;
 font-weight: 600;
 font-size: 25px;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 font-style: italic;
+margin-bottom: 7%;
+margin-right: 30%;
 }
+
+
+
+/* random (unused code) */
+
+#sponsor {
+  position: relative;
+}
+.parallax-container {
+  position: fixed; /* Fixed position so it stays on screen while scrolling */
+  top: 50%;       /* Center vertically */
+  left: 0;
+  width: 170%;
+  height: 60px;
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+
+/* This is the track that will move when scrolling */
+.parallax-track {
+  position: absolute;
+  left: 0;
+  width: 3000px; /* Wide enough to hold all icons */
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Individual icon styling */
+.icon {
+  width: 290px;
+  height: 50px;
+  margin: 0 6px;
+  background-color: black;
+  fill:#ccc;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* unused code */
+
 
 /* contact */
 #contact {
