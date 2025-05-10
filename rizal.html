@@ -3,17 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="biography.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="icon" type="image/png" href="image/logo.png">
+
     <title>bayaniHub</title>
 </head>
 <body>
+    <header class="header">
+        <button class="back-btn" onclick="goBack()" title="Back"><box-icon type='solid' name='arrow-from-right'></box-icon></button>
+        <h1 class="main-title">The Life of Dr. Jose Rizal</h1>
+        <div class="nav-buttons">
+            <button class="translate" title="translate">
+                <i class="fa-solid fa-earth-asia"></i>
+            </button>
+            <button class="toggle-btn" title="Website Mode">
+                <span id="mode-icon"><i class="bx bx-moon"></i></span>
+            </button>
+         </div>
+    </header>
 
-    <section id="info">
-        <div>
-            <h3 class="rizal-header">
-                welcome to rizal information
-            </h3>
+    <main class="content">
+        <img src="img/rizal cropped.png" alt="Dr. Jose Rizal" class="hero-image" height="90%">
+        
+        <div class="hero-text">
+            <h2 class="hero-title">You don't need to die for your country to be a hero.</h2>
+            <p class="hero-subtitle">All Filipinos know Jose Rizal as the national hero—but his life was more than his martyrdom. <span class="highlight">He was a renaissance man who changed a nation through his pen.</span></p>
+            <p class="hero-subtitle">The story of Jose Rizal is the story of how ideas can transform a society.</p>
         </div>
-    </section>
-    
+
+        <section class="biography">
+            <p class="biography-text">
+                Born on June 19, 1861, in Calamba, Laguna, José Protasio Rizal Mercado y Alonso Realonda was a Filipino nationalist, physician, and writer whose works and activism played a crucial role in the Philippines' movement for independence from Spanish colonization.
+            </p>
+            <p class="biography-text">
+                A brilliant student from an early age, Rizal attended the Ateneo Municipal de Manila and later the University of Santo Tomas. His thirst for knowledge led him to Europe, where he continued his studies in medicine at the Universidad Central de Madrid and specialized in ophthalmology in Paris and Heidelberg.
+            </p>
+            <p class="biography-text">
+                But Rizal was far more than just a doctor. He was a polymath who spoke over 20 languages, practiced sculpture and painting, studied anthropology and ethnography, and excelled as a poet, essayist, and novelist. His most famous works—<i>Noli Me Tángere</i> (Touch Me Not) and <i>El Filibusterismo</i> (The Subversive)—exposed the injustices of Spanish colonial rule and inspired a growing sense of national identity among Filipinos.
+            </p>
+            <p class="biography-text">
+                Rizal's advocacy for peaceful reform rather than violent revolution made him a target of Spanish authorities. Despite living in voluntary exile in Europe for much of his adult life, he returned to the Philippines in 1892 and founded the civic organization La Liga Filipina, which advocated for reforms through peaceful means.
+            </p>
+            <p class="biography-text">
+                Shortly after establishing La Liga, Rizal was arrested and exiled to Dapitan in Mindanao, where he spent four years teaching, conducting scientific research, and providing free medical care to the community. Even in exile, his impact continued to grow.
+            </p>
+            <p class="biography-text">
+                In 1896, as the Philippine Revolution erupted, Rizal was implicated in the rebellion despite his advocacy for peaceful reform. He was arrested en route to Cuba, where he had volunteered to serve as a doctor during a yellow fever epidemic. After a mock trial, he was convicted of rebellion, sedition, and conspiracy.
+            </p>
+            <p class="biography-text">
+                On December 30, 1896, at the age of 35, Jose Rizal was executed by firing squad at Bagumbayan (now Rizal Park) in Manila. The night before his execution, he wrote "Mi Último Adiós" (My Last Farewell), a powerful final testament to his love for the Philippines. His execution made him a martyr for the cause of Filipino freedom and galvanized the revolutionary movement.
+            </p>
+            <p class="biography-text">
+                Rizal's legacy extends far beyond his martyrdom. His writings awakened Filipino national consciousness and laid the intellectual foundation for the Philippine Revolution. More than a century after his death, Rizal remains a symbol of Filipino nationalism, intellectual excellence, and moral courage in the face of oppression.
+            </p>
+        </section>
+
+        <section class="works-section">
+            <p class="works-title">Major Works of Dr. Jose Rizal</p>
+            <div class="works-grid">
+                <div class="work-card-1">
+                    <div class="work-content">
+                        <h4 class="work-title">Noli Me Tángere (Touch Me Not)</h4>
+                        <div class="work-year">1887</div>
+                        <p class="work-description">Rizal's first novel exposed the corruption of Spanish colonial rule in the Philippines. The story follows Juan Crisóstomo Ibarra as he returns to the Philippines after studying in Europe, only to face the harsh realities of Spanish colonial society.</p>
+                    </div>
+                </div>
+
+                <div class="work-card-2">
+                    <div class="work-content">
+                        <h4 class="work-title">El Filibusterismo (The Subversive)</h4>
+                        <div class="work-year">1891</div>
+                        <p class="work-description">The darker sequel to Noli Me Tángere follows the return of Ibarra as the jeweler Simoun, plotting revolution against the Spanish government. The novel explores the consequences of oppression and the moral dilemmas of revolution.</p>
+                    </div>
+                </div>
+
+                <div class="work-card-3">
+                    <div class="work-content">
+                        <h4 class="work-title">Mi Último Adiós (My Last Farewell)</h4>
+                        <div class="work-year">1896</div>
+                        <p class="work-description">Written on the eve of his execution, this poignant poem expresses Rizal's deep love for his country and his willingness to die for its freedom. It has been translated into over 100 languages and is considered one of the greatest patriotic poems.</p>
+                    </div>
+                </div>
+
+                <div class="work-card-4">
+                    <div class="work-content">
+                        <h4 class="work-title">To The Filipino Youth</h4>
+                        <div class="work-year">1879</div>
+                        <p class="work-description">One of Rizal's earliest works, this poem encourages Filipino youth to rise up and use their talents for the betterment of the nation. It emphasizes the importance of education and wisdom in national progress.</p>
+                    </div>
+                </div>
+
+                <div class="work-card-5">
+                    <div class="work-content">
+                        <h4 class="work-title">The Philippines A Century Hence</h4>
+                        <div class="work-year">1889-1890</div>
+                        <p class="work-description">In this essay series, Rizal analyzes the Philippine situation and predicts the future of the country. His political insight and foresight demonstrated in these essays were remarkably accurate.</p>
+                    </div>
+                </div>
+
+                <div class="work-card-6">
+                    <div class="work-content">
+                        <h4 class="work-title">The Indolence of the Filipino</h4>
+                        <div class="work-year">1890</div>
+                        <p class="work-description">Rizal refutes the Spanish colonial view that Filipinos were inherently lazy, arguing instead that any perceived indolence was the result of the oppressive colonial system and tropical climate.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="rizal.js"></script>
 </body>
 </html>
