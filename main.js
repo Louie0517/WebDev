@@ -282,7 +282,7 @@ const heroesInfo = {
 
     "Ano ang naiambag ni Ninoy Aquino sa demokrasya ng Pilipinas?":
         "Si Benigno 'Ninoy' Aquino Jr. ay isang senador na tumutol sa diktadurya ni Ferdinand Marcos. Ang kanyang pagbabalik sa Pilipinas at pagkamatay noong 1983 ay nagpagising sa damdaming makabayan ng mga Pilipino."
-    "Kailan pinangak si rizal?":
+    "Kailan pinanganak si rizal?":
     "Si José Rizal ay ipinanganak noong Hunyo 19, 1861 sa Calamba, Laguna, Pilipinas.",
         "ilan ang naging nobya ni rizal":
     "Si Jose Rizal ay nagkaroon ng siyam (9) na kilalang nobya: Segunda Katigbak, Leonor Valenzuela, Leonor Rivera, Consuelo Ortiga, O-Sei-San, Gertrude Beckett, Suzanne Jacoby, Nellie Boustead, at Josephine Bracken."
