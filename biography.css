@@ -152,7 +152,12 @@
         .works-title {
             font-size: 2rem;
             margin-bottom: 1.5rem;
+            color: black;
             text-align: center;
+        }
+
+        .dark-mode .works-title {
+            color: white;
         }
 
         .works-grid {
@@ -237,6 +242,7 @@
             background-position: center;
             background-repeat: no-repeat;
             position: relative;
+           
         }
 
         .work-card-3::after {
@@ -351,10 +357,14 @@
         .work-title {
             font-size: 1.3rem;
             margin-bottom: 0.5rem;
-            color: var(--accent-color);
+            color: white;
             z-index: 1;
             position: relative;
         }
+
+     .dark-mode .work-title{
+        color: #f1a013;
+     }
 
         .work-year{
             font-size: 0.9rem;
@@ -368,6 +378,7 @@
             font-size: 1rem;
             line-height: 1.6;
             z-index: 1;
+            color: white;
             position: relative;
         }
 
@@ -377,17 +388,91 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         }
 
-        @media (max-width: 900px) {
-            .content {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-image {
-                grid-column: span 1;
-            }
-
-            .hero-text {
-                grid-column: span 1;
-                margin-top: 2rem;
-            }
+        .voiceButton{
+            justify-self:end;
+            align-items: end;
         }
+        
+        .voiceButton {
+    position: fixed;
+    right: 20px; /* Adjust as needed */
+    bottom: 20px; /* Adjust as needed */
+    align-items: end;
+}
+
+#readButton {
+    padding: 10px 20px;
+    background-color: #ed7003;
+    margin: 20px;
+    border: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 1em;
+    fill: white;
+    cursor: pointer;
+    position: fixed;
+    right: 20px; 
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s;
+}
+
+#readButton i {
+    font-size: 24px;
+}
+
+#readButton:hover {
+    background-color: #db6c04f5;
+}
+
+
+/* Style for translate button */
+.translate {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+    padding: 8px 12px;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.translate:hover {
+    background-color: rgba(128, 128, 128, 0.1);
+}
+
+.translate i {
+    font-size: 1.3rem;
+    color: var(--text-color);
+}
+
+.dark-mode .translate i,
+.dark-mode .translate {
+    color: white;
+}
+
+/* Animation for translation */
+@keyframes fadeTranslation {
+    from { opacity: 0.7; }
+    to { opacity: 1; }
+}
+
+body.translating {
+    animation: fadeTranslation 0.5s ease;
+}
+
+/* Translation note styling */
+.translation-note {
+    background-color: rgba(255, 193, 7, 0.1);
+    padding: 8px;
+    border-radius: 4px;
+    margin-top: 1rem;
+    border-left: 3px solid #ffc107;
+    font-style: italic;
+}
