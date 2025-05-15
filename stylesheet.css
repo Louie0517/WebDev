@@ -18,6 +18,7 @@ body {
   margin: 0;
 }
 
+
 .top {
   position: relative;
   width: 100vw;
@@ -284,13 +285,7 @@ h1 {
 
 #about {
 width: 100%;
-height: 110vh;
-
-}
-
-.about {
-justify-content: center;
-align-items: center;
+height: 100%;
 
 }
 
@@ -298,9 +293,9 @@ align-items: center;
 font-size: 1.8em;
 color: white;
 justify-self:right;
-margin-top: 4em;
-margin-right: 25rem;
-color: chocolate;
+margin-top: 20%;
+margin-right: 27rem;
+color: rgb(230, 98, 4);
 }
 
 @media screen and (max-width: 600px) {
@@ -392,8 +387,8 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
   color: white;
   position: absolute;
   margin-left: 46%;
-  margin-bottom: 19%;
-  transform: translate(-46%, -19%);
+  margin-bottom: 26%;
+  transform: translate(-46%, -2%);
   text-align: center;
   white-space: nowrap;
 }
@@ -413,7 +408,7 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
 
 #objectives {
   width: 90%;
-  height: 100vh;
+  height: 100%;
   justify-self: center;
   border-radius: 2em;
   z-index: -1;
@@ -481,6 +476,8 @@ margin-left: 5em;
  mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 30%, rgba(0,0,0,0) 20%);
  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
  background: radial-gradient(circle at center, rgba(219, 93, 40, 0.6) 10%, rgba(0, 0, 0, 0) 70%);
+   
+
 }
 
 /* Chat Bot */
@@ -594,9 +591,6 @@ margin-left: 5em;
   background-color: rgba(0, 0, 0, 0.137);
 
 }
-
-
-
 
 
 /*resources*/
@@ -731,8 +725,6 @@ margin-bottom: 7%;
 margin-right: 30%;
 }
 
-
-
 /* random (unused code) */
 
 #sponsor {
@@ -778,143 +770,77 @@ margin-right: 30%;
   height: 100%;
   object-fit: cover;
 }
+
+
 /* unused code */
 
 
+
 /* contact */
+.map {
+  margin-left: 50%;
+  margin-top: 50%;
+  transform: translate(0%, 40%);
+}
+
 #contact {
-width: 100vw;
-height: 100vh;
-background-color: #421515e7;
-object-fit: cover;
-z-index: 0;
+  position: absolute;
+  height: 90vh;
+  min-height: 90%;
+  display: flex;
+  position: relative;
+  background-color: white;
 }
 
-
-/* Form Container */
-.footer-form-container {
-max-width: 500px;
-margin: 50px auto;
-padding: 2em;
-background-color: #a3a399; 
-border-radius: 8px;
-position: absolute;
-bottom: 20px;
-left: 60px;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-z-index: 1;
+.credits {
+  margin-left:  10%;
+  margin-top: 12%;
+  white-space: nowrap;
+  
 }
 
-/* Form Elements */
-#suggestion-form {
-display: flex;
-flex-direction: column;
-gap: 1em; 
+.credits p {
+  font-size: 30px;
 }
 
-#suggestion-form label {
-font-size: 1rem;
-text-align: left; 
+.credits ul {
+  list-style: none;
 }
 
-#suggestion-form input,
-#suggestion-form textarea {
-width: 100%;
-padding: 0.8em;
-border: 1px solid #ccc;
-border-radius: 5px;
-font-size: 1rem;
+#contributor {
+  margin-left: 10%;
+  margin-top: 12%;
+  white-space: nowrap;
 }
 
-#suggestion-form input:focus,
-#suggestion-form textarea:focus {
-border-color: #007BFF; 
-outline: none;
-box-shadow: 0 0 5px rgba(0, 123, 255, 0.6);
+#contributor p {
+  font-size: 30px;
 }
 
-/* Submit Button */
-#suggestion-form button {
-background-color: rgb(185, 65, 21); 
-color: white;
-padding: 0.8em;
-border: none;
-border-radius: 5px;
-font-size: 1rem;
-cursor: pointer;
-transition: background-color 0.3s ease;
+#contributor ul {
+  list-style: none;
 }
 
-#suggestion-form button:hover {
-background-color: rgba(149, 55, 21, 0.971); 
-}
-
-#suggestion-form button:active {
-background-color: rgba(192, 78, 36, 0.9); 
-}
-
-#museum {
-width: 40em;
-position: relative;
-margin-left: 38em;
-margin-top: 62%;
-z-index: 10;
-bottom: 80%;
-left: 20%;
-transform: translate(-30%, 80%);
-border-radius: 2em;
-filter: grayscale(50%) brightness(120%);
-
-}
 #icons {
-
-position: absolute;
-margin-top: 39%;
-margin-left: 41%;
-
-}
-.slayed {
-fill: rgb(234, 204, 4);
-margin: 1em;
-transform: scale(2);
-transition: transform 0.3s ease;
+  margin-top: 25%;
+  margin-left: 6%;
+  white-space: nowrap;
 }
 
-.slayed:hover {
-transform: scale(1.4);
+#icons #connect {
+  font-size: 25px;
 }
 
-#yo {
-position: absolute;
-margin-left: 42%;
-margin-top: 30%;
+#logo {
+  width: 10%;
+  size: 10%;
 }
 
-#yo p {
-color: white;
-font-size: 37px;
-font-style: italic;
-
+#infos {
+  margin-top: 14%;
+  margin-right: 23%;
+ white-space: nowrap;
 }
-.notify {
-position: absolute;
-
-}
-
-
-#mamamo {
-color: white;
-justify-self: start;
-font-size: 20px;
-text-align: justify;
-margin-left: 50%;
-margin-top: 40%;
-}
-
-/* ==========================================================================
- NEW RESPONSIVE STYLES - MEDIA QUERIES ONLY
- Keep original desktop styles intact and only add responsive adjustments
- ========================================================================== */
 
 /* Large Screens (up to 1200px) */
 @media screen and (max-width: 1200px) {
@@ -977,20 +903,6 @@ margin-top: 40%;
 /* Objectives section adjustments */
 .objective-content p {
   max-width: 70%;
-}
-
-/* Museum and contact adjustments */
-#museum {
-  width: 30em;
-  margin-left: 30em;
-}
-
-#icons {
-  margin-left: 38%;
-}
-
-#yo {
-  margin-left: 38%;
 }
 }
 
@@ -1130,57 +1042,6 @@ margin-top: 40%;
   grid-template-columns: 1fr;
 }
 
-/* Contact section adjustments */
-#contact {
-  height: auto;
-  min-height: 140vh;
-  padding-bottom: 2em;
-  position: relative;
-}
-
-.footer-form-container {
-  position: relative;
-  left: 0;
-  margin: 2em auto;
-  max-width: 90%;
-}
-
-#museum {
-  width: 90%;
-  max-width: 500px;
-  margin: 2em auto;
-  display: block;
-  position: relative;
-  transform: none;
-  left: 0;
-}
-
-#icons {
-  position: relative;
-  margin: 2em auto;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 1em;
-}
-
-#yo {
-  position: relative;
-  margin: 0 auto;
-  text-align: center;
-  width: 100%;
-}
-
-#yo p {
-  font-size: 28px;
-}
-
-#mamamo {
-  margin: 0 auto;
-  width: 90%;
-  text-align: center;
-  position: relative;
-}
 }
 
 /* Mobile Screens (up to 576px) */
@@ -1297,4 +1158,5 @@ margin-top: 40%;
 #yo p {
   font-size: 20px;
 }
+
 }
