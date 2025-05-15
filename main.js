@@ -154,6 +154,95 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+/*
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollHorizontal = document.querySelector('.obj-images'); 
+    const images = document.querySelectorAll('.obj-images .slide'); 
+
+    const totalWidth = scrollHorizontal.scrollWidth; 
+    gsap.to(scrollHorizontal, {
+        x: `-${totalWidth - scrollHorizontal.offsetWidth}px`, 
+        duration: 10, 
+        repeat: -1, 
+        ease: "linear", 
+        modifiers: {
+            x: (x) => `${parseFloat(x) % totalWidth}px`, 
+        }
+    });
+});
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollHorizontal = document.querySelector('.obj-images');
+    const slides = document.querySelectorAll('.obj-images .slide');
+    
+    // Initialize animation speed
+    let animationSpeed = 20;
+    let animation;
+    
+    // Initialize GSAP
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // Set up entrance animations for slides
+    function setupEntranceAnimations() {
+        slides.forEach((slide, index) => {
+            // Initial state
+            gsap.set(slide, { 
+                opacity: 0,
+                scale: 0.8,
+                y: 20
+            });
+            
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Animate in when visible
+                        gsap.to(slide, {
+                            opacity: 1,
+                            scale: 1,
+                            y: 0,
+                            duration: 0.7,
+                            ease: "power2.out",
+                            onComplete: () => {
+                                slide.classList.add('active');
+                            }
+                        });
+                        
+                        // Only trigger once
+                        observer.unobserve(slide);
+                    }
+                });
+            }, { threshold: 0.3 });
+            
+            observer.observe(slide);
+        });
+    }
+    
+    // Start the scrolling animation
+    function startAnimation() {
+        // Clear any existing animation
+        if (animation) {
+            animation.kill();
+        }
+        
+        const totalWidth = scrollHorizontal.scrollWidth / 2; // Divide by 2 because we duplicated slides
+        
+        animation = gsap.to(scrollHorizontal, {
+            x: `-${totalWidth}px`,
+            duration: animationSpeed,
+            repeat: -1,
+            ease: "linear",
+            modifiers: {
+                x: (x) => `${parseFloat(x) % totalWidth}px`,
+            }
+        });
+    }
+}); */
+
 
 document.addEventListener('DOMContentLoaded', () => {
        const objectives = document.querySelectorAll('.resource-card-1, .resource-card-2, .resource-card-3');
@@ -229,13 +318,86 @@ document.querySelector(".about-button").addEventListener("click", () => {
     document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
   });
   
+/*
+  // Logos for partnership
+  const track = document.getElementById('parallaxTrack');
+        
+  
+  const iconSources = [
+      'img/slide1.jpeg', 
+      'img/slide_2.png', 
+      'img/slide 3.png', 
+      'img/slide1.jpeg', 
+      'img/slide_2.png'
+  ];
+  
+  // Create multiple sets of icons to fill the track
+  for (let j = 0; j < 6; j++) {
+      for (let i = 0; i < iconSources.length; i++) {
+          const icon = document.createElement('div');
+          icon.className = 'icon';
+          
+          const img = document.createElement('img');
+          img.src = iconSources[i];
+          img.alt = 'Icon ' + (i + 1);
+          
+          icon.appendChild(img);
+          track.appendChild(icon);
+      }
+  }
+  
+  // Track position and scroll variables
+  let trackPosition = 0;
+  let lastScrollPosition = window.pageYOffset;
+  
+  // Parallax effect on scroll
+  window.addEventListener('scroll', function() {
+      // Current scroll position
+      const currentScrollPosition = window.pageYOffset;
+      
+      // Determine scroll direction
+      const scrollDirection = currentScrollPosition > lastScrollPosition ? 'down' : 'up';
+      
+      // Calculate scroll amount
+      const scrollDifference = Math.abs(currentScrollPosition - lastScrollPosition);
+      
+      // Update track position based on scroll direction
+      if (scrollDirection === 'down') {
+          // Move icons to the left when scrolling down
+          trackPosition -= scrollDifference * 0.5; // Adjust speed factor as needed
+      } else {
+          // Move icons to the right when scrolling up
+          trackPosition += scrollDifference * 0.5; // Adjust speed factor as needed
+      }
+      
+      // Apply the new position
+      track.style.transform = `translateX(${trackPosition}px)`;
+      
+      // Update the last scroll position
+      lastScrollPosition = currentScrollPosition;
+      
+      // Loop the icons if needed
+      const trackWidth = track.offsetWidth;
+      const containerWidth = document.querySelector('.parallax-container').offsetWidth;
+      
+      // Reset if we've scrolled too far in either direction
+      if (trackPosition < -trackWidth + containerWidth) {
+          trackPosition = 0;
+      }
+      if (trackPosition > 0) {
+          trackPosition = -trackWidth + containerWidth;
+      }
+  });
+
+  */
+
+  
 
 const chatBox = document.getElementById('chatBox');
 const closeChat = document.getElementById('closeChat');
 const messageInput = document.getElementById('messageInput');
 const sendMessage = document.getElementById('sendMessage');
 const chatMessages = document.getElementById('chatMessages');
-
 
 const heroesInfo = {
     "Sino si Jose Rizal at ano ang kanyang mga kontribusyon sa kasaysayan ng Pilipinas?":
@@ -282,12 +444,7 @@ const heroesInfo = {
 
     "Ano ang naiambag ni Ninoy Aquino sa demokrasya ng Pilipinas?":
         "Si Benigno 'Ninoy' Aquino Jr. ay isang senador na tumutol sa diktadurya ni Ferdinand Marcos. Ang kanyang pagbabalik sa Pilipinas at pagkamatay noong 1983 ay nagpagising sa damdaming makabayan ng mga Pilipino."
-    "Kailan pinanganak si rizal?":
-    "Si José Rizal ay ipinanganak noong Hunyo 19, 1861 sa Calamba, Laguna, Pilipinas.",
-        "ilan ang naging nobya ni rizal":
-    "Si Jose Rizal ay nagkaroon ng siyam (9) na kilalang nobya: Segunda Katigbak, Leonor Valenzuela, Leonor Rivera, Consuelo Ortiga, O-Sei-San, Gertrude Beckett, Suzanne Jacoby, Nellie Boustead, at Josephine Bracken."
 };
-
 
 
 
