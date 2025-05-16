@@ -112,15 +112,14 @@ document.addEventListener('DOMContentLoaded', () => {
         "symbolism": "simbolismo",
         "themes": "mga tema",
         
-        // Add more translation pairs as needed
     };
     
-    // Function to translate page to Tagalog
+    
     function translatePageToTagalog() {
-        // Add a class to body for styling during translation
+        
         document.body.classList.add('translating');
         
-        // Focus on key content elements (h2, p, and other common text elements)
+        
         translateHeadingsAndParagraphs();
         
         // Remove translation animation class after transition
