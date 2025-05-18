@@ -84,13 +84,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
     gsap.registerPlugin(ScrollTrigger);
 
 
-    // Select all objective items
+    
     const objectives = document.querySelectorAll('tag-about');
 
     objectives.forEach((item, index) => {
@@ -136,7 +134,6 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener('DOMContentLoaded', () => {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Select all objective items
     const objectives = document.querySelectorAll('.objective-item');
 
     objectives.forEach((item, index) => {
@@ -153,26 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
-/*
-document.addEventListener('DOMContentLoaded', () => {
-    const scrollHorizontal = document.querySelector('.obj-images'); 
-    const images = document.querySelectorAll('.obj-images .slide'); 
-
-    const totalWidth = scrollHorizontal.scrollWidth; 
-    gsap.to(scrollHorizontal, {
-        x: `-${totalWidth - scrollHorizontal.offsetWidth}px`, 
-        duration: 10, 
-        repeat: -1, 
-        ease: "linear", 
-        modifiers: {
-            x: (x) => `${parseFloat(x) % totalWidth}px`, 
-        }
-    });
-});
-
-
-
 
 
 document.addEventListener('DOMContentLoaded', () => {
